@@ -23,7 +23,7 @@ RUN apk add --no-cache \
 # Get Mattermost
 RUN mkdir -p /mattermost/data
 RUN echo 'Remember to run `make build` in mattermost-webapp before building the image'
-COPY mattermost-webapp mattermost
+COPY webapp mattermost
     # && if [ "$edition" = "team" ] ; then curl https://releases.mattermost.com/$MM_VERSION/mattermost-team-$MM_VERSION-linux-amd64.tar.gz | tar -xvz ; \
     #   else curl https://releases.mattermost.com/$MM_VERSION/mattermost-$MM_VERSION-linux-amd64.tar.gz | tar -xvz ; fi \
 RUN cp /mattermost/config/config.json /config.json.save \
